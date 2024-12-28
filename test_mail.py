@@ -12,7 +12,8 @@ for i in receiver:
     msg["To"] = i
     msg["Subject"] = Header("Test send email","utf-8").encode() #若沒有設utf-8會出現亂碼，預設ASCII編碼)
 
-    body = "This is email content, send by python"
+    body = "This is email content,\n"
+    body2= "send by python"  #或直接讀檔案的文件
 
     msg_text = MIMEText(body)
     msg.attach(msg_text)
