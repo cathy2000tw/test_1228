@@ -1,6 +1,8 @@
 name: Run python
 on: 
     push:
+    schedule:
+    - cron: 0 0 * * * # 時間是以(倫敦)格林威治時間為準，相當於台灣時間早上 8 點
 
 jobs:
     build:
